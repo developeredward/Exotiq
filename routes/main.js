@@ -1,0 +1,111 @@
+const express = require("express");
+const router = express.Router();
+
+router.get("/", (req, res) => {
+  const locals = {
+    title: "Exotiq Rentals - Home",
+    description: "This is the homepage",
+  };
+  const data = [
+    {
+      id: 1,
+      name: "Ferrari F12 Berlinetta Coupe-2012",
+      image: "/cars/FerrariF12 BerlinettaCoupe.png",
+      priceDaily: 280,
+      priceMonthly: 38000,
+      category: "Sports",
+      transmission: "Manual",
+      fuel: "Petrol",
+      horsePower: "10km",
+      engine: "120cc",
+    },
+    {
+      id: 2,
+      name: "Ferrari 458 Spider-2012",
+      image: "/cars/Ferrari458.png",
+      priceDaily: 160,
+      priceMonthly: 26400,
+      category: "Sports",
+      transmission: "Manual",
+      fuel: "Petrol",
+      horsePower: "5km",
+      engine: "130cc",
+    },
+    {
+      id: 3,
+      name: "Koenigsegg Agera R1",
+      image: "/cars/KoenigseggAgeraR1.png",
+      priceDaily: 350,
+      priceMonthly: 52300,
+      category: "SuperCars",
+      transmission: "Manual",
+      fuel: "Petrol",
+      horsePower: "40km",
+      engine: "300cc",
+    },
+    {
+      id: 4,
+      name: "Lamborghini Aventador 2018",
+      image: "/cars/2018Aventadors.png",
+      priceDaily: 400,
+      priceMonthly: 70000,
+      category: "SuperCars",
+      transmission: "Manual",
+      fuel: "Petrol",
+      horsePower: "30km",
+      engine: "850cc",
+    },
+    {
+      id: 5,
+      name: "Toyota Corolla 2016",
+      image: "/cars/2016ToyotaCorolla.png",
+      priceDaily: 80,
+      priceMonthly: 59999,
+      category: "Sports",
+      transmission: "Automatic",
+      fuel: "Petrol",
+      horsePower: "34km",
+      engine: "230cc",
+    },
+    {
+      id: 6,
+      name: "Mercedes-Benz A-Class",
+      image: "/cars/Mercedes-BenzAClass.png",
+      priceDaily: 200,
+      priceMonthly: 30000,
+      category: "Sports",
+      transmission: "Automatic",
+      fuel: "Petrol",
+      horsePower: "20km",
+      engine: "200cc",
+    },
+    {
+      id: 7,
+      name: "Lamborghini Huracan",
+      image: "/cars/pngwing.com.png",
+      priceDaily: 420,
+      priceMonthly: 102000,
+      category: "SuperCars",
+      transmission: "Manual",
+      fuel: "Petrol",
+      horsePower: "50km",
+      engine: "230cc",
+    },
+    {
+      id: 8,
+      name: "Toyota Hilux",
+      image: "/cars/ToyotaHilux.png",
+      priceDaily: 299,
+      priceMonthly: 40000,
+      category: "SUV",
+      transmission: "Manual",
+      fuel: "Petrol",
+      horsePower: "20km",
+      engine: "120cc",
+    },
+  ];
+
+  res.render("index", { locals, content: data });
+});
+
+module.exports = router;

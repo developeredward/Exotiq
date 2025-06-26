@@ -4,6 +4,16 @@
   box-sizing: border-box;
 }
 
+:root {
+  --primary-color: #e7a602;
+  --secondary-color: #181818;
+}
+
+a {
+  text-decoration: none;
+  color: #181818;
+}
+
 body {
   max-width: 1440px;
   overflow-x: hidden;
@@ -13,7 +23,52 @@ body {
 }
 
 .default-layout {
-  padding: 0 50px;
+  padding: 0 300px;
+}
+
+.--flex-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.--flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.--flex-around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.--flex-evenly {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.--flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.--flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-primary {
+  transition: 0.3s linear;
+  background: var(--primary-color);
+  color: #ffffff;
+}
+.btn-primary:hover {
+  background: #747474;
+  color: #ffffff;
 }
 
 .background-container {
@@ -31,7 +86,7 @@ body {
 .btn-primary {
   width: 119px;
   height: 39px;
-  background: #e7a602;
+  background: var(--primary-color);
   border: none;
   border-radius: 5px;
   color: #ffffff;
@@ -51,7 +106,7 @@ body {
 }
 .nav-container .nav-contents .logo {
   z-index: 1;
-  background: #181818;
+  background: var(--secondary-color);
 }
 .nav-container .nav-contents .nav-items {
   display: flex;
@@ -89,10 +144,10 @@ body {
   cursor: pointer;
 }
 .nav-container .nav-contents .nav-items .items .layer .item .shift-layer-left {
-  padding: 0 50px 0 0;
+  padding: 0 300px 0 0;
 }
 .nav-container .nav-contents .nav-items .items .layer .item .shift-layer-right {
-  padding: 0 0 0 50px;
+  padding: 0 0 0 300px;
 }
 
 .landing-page-container {
@@ -110,7 +165,7 @@ body {
   flex-direction: column;
 }
 .landing-page-container .landing-page-contents .trending {
-  color: #e7a602;
+  color: var(--primary-color);
   text-align: center;
   margin-bottom: 20px;
 }
@@ -122,7 +177,7 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 100vw;
-  padding: 0 50px;
+  padding: 0 300px;
   position: absolute;
   top: 80%;
   left: 50%;
@@ -134,9 +189,10 @@ body {
   border: none;
   border-radius: 3px;
   cursor: pointer;
+  background: #f4f7fd;
 }
 .landing-page-container .landing-page-contents .slider-container .slider-action-btns .btn-secondary {
-  background: #e7a602;
+  background: var(--primary-color);
 }
 .landing-page-container .landing-page-contents .slider-container .slider-content {
   display: flex;
@@ -180,7 +236,7 @@ body {
   cursor: pointer;
 }
 .landing-page-container .landing-page-contents .slider-container .slider-content .slider-btns .btn-primary {
-  background: #e7a602;
+  background: var(--primary-color);
 }
 .landing-page-container .landing-page-contents .slider-container .slider-content .slider-btns .btn-secondary {
   border: 1px solid #ffffff;
@@ -251,20 +307,21 @@ body {
   font-weight: 100;
 }
 .car-display-layout .car-brands-layout .car-brands .active {
-  background: #e7a602;
+  background: var(--primary-color);
   color: #ffffff;
 }
 
 .car-display-view {
   display: flex;
   flex-wrap: wrap;
-  gap: 73px;
+  justify-content: space-between;
+  gap: 20px;
 }
 .car-display-view .card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 400px;
+  width: 310px;
   height: 400px;
   background: #fffefe;
   border-radius: 3px;
@@ -276,7 +333,7 @@ body {
   transform: scale(1.005);
 }
 .car-display-view .card:hover .btn-n {
-  background: #e7a602;
+  background: var(--primary-color);
   color: #ffffff;
   border: none;
 }
@@ -297,7 +354,7 @@ body {
   gap: 20px;
 }
 .car-display-view .card .card-text .name {
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 700;
 }
 .car-display-view .card .card-text .pricing,
@@ -314,7 +371,7 @@ body {
   gap: 10px;
 }
 .car-display-view .card .card-text .pricing {
-  font-size: 15px;
+  font-size: 13px;
   color: #5f5f5f;
   gap: 40px;
 }
@@ -325,16 +382,94 @@ body {
   font-weight: bold;
 }
 .car-display-view .card .card-text .details {
-  gap: 20px;
-  font-size: 12px;
+  gap: 6px;
+  font-size: 11px;
+  text-align: center;
 }
 .car-display-view .card .btn-n {
   background: transparent;
   height: 39px;
-  color: #181818;
-  border: 1px solid #181818;
+  color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
   border-radius: 5px;
   width: 100%;
   cursor: pointer;
   transition: 0.1s linear;
+}
+
+.background-container {
+  z-index: -1;
+}
+
+.form-container {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  padding: 0 300px 0 200px;
+  background-color: #171717;
+}
+.form-container .img-container,
+.form-container .authentication-container,
+.form-container .footer {
+  position: relative;
+  top: 250px;
+}
+.form-container .authentication-container {
+  background: #ffffff;
+  padding: 30px 50px;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+}
+.form-container .authentication-container .logo {
+  margin-bottom: 20px;
+}
+.form-container .authentication-container .text {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.form-container .authentication-container .text span {
+  color: #a8a8a8;
+  font-size: 18px;
+}
+.form-container .authentication-container .form-items {
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.form-container .authentication-container .form-items .details-fields {
+  min-width: 300px;
+  border: none;
+  height: 40px;
+  margin: 5px 0;
+  outline: none;
+  background: transparent;
+  border-bottom: 1px solid #181818;
+  transition: 0.1s linear;
+}
+.form-container .authentication-container .form-items .details-fields:focus {
+  border-bottom: 1px solid var(--primary-color);
+}
+.form-container .authentication-container .form-items .btn {
+  min-width: 300px;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.1s linear;
+}
+.form-container .authentication-container .form-items .btn:hover {
+  background: var(--secondary-color);
+  color: #ffffff;
+}
+.form-container .authentication-container .form-items .btn-secondary {
+  border: 1px solid var(--secondary-color);
+  background: transparent;
+}
+.form-container .authentication-container .links {
+  padding: 40px 0;
 }/*# sourceMappingURL=styles.css.map */

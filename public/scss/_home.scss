@@ -12,7 +12,7 @@
 .btn-primary {
   width: 119px;
   height: 39px;
-  background: #e7a602;
+  background: var(--primary-color);
   border: none;
   border-radius: 5px;
   color: #ffffff;
@@ -29,7 +29,7 @@
     width: 100%;
     .logo {
       z-index: 1;
-      background: #181818;
+      background: var(--secondary-color);
     }
     .nav-items {
       display: flex;
@@ -65,10 +65,10 @@
             font-weight: 100;
             cursor: pointer;
             .shift-layer-left {
-              padding: 0 50px 0 0;
+              padding: 0 300px 0 0;
             }
             .shift-layer-right {
-              padding: 0 0 0 50px;
+              padding: 0 0 0 300px;
             }
           }
         }
@@ -90,7 +90,7 @@
     align-items: center;
     flex-direction: column;
     .trending {
-      color: #e7a602;
+      color: var(--primary-color);
       text-align: center;
       margin-bottom: 20px;
     }
@@ -101,7 +101,7 @@
         justify-content: space-between;
         align-items: center;
         width: 100vw;
-        padding: 0 50px;
+        padding: 0 300px;
         position: absolute;
         top: 80%;
         left: 50%;
@@ -112,9 +112,10 @@
           border: none;
           border-radius: 3px;
           cursor: pointer;
+          background: #f4f7fd;
         }
         .btn-secondary {
-          background: #e7a602;
+          background: var(--primary-color);
         }
       }
       .slider-content {
@@ -157,7 +158,7 @@
             cursor: pointer;
           }
           .btn-primary {
-            background: #e7a602;
+            background: var(--primary-color);
           }
           .btn-secondary {
             border: 1px solid #ffffff;
@@ -231,7 +232,7 @@
         }
       }
       .active {
-        background: #e7a602;
+        background: var(--primary-color);
         color: #ffffff;
       }
     }
@@ -240,13 +241,14 @@
 .car-display-view {
   display: flex;
   flex-wrap: wrap;
-  gap: 73px;
+  justify-content: space-between;
+  gap: 20px;
   .card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
-    width: 400px;
+    width: 310px;
     height: 400px;
     background: #fffefe;
     border-radius: 3px;
@@ -256,7 +258,7 @@
       box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.056);
       transform: scale(1.005);
       .btn-n {
-        background: #e7a602;
+        background: var(--primary-color);
         color: #ffffff;
         border: none;
       }
@@ -277,7 +279,7 @@
       padding: 20px 20px;
       gap: 20px;
       .name {
-        font-size: 20px;
+        font-size: 15px;
         font-weight: 700;
       }
       .pricing,
@@ -295,7 +297,7 @@
         gap: 10px;
       }
       .pricing {
-        font-size: 15px;
+        font-size: 13px;
         color: #5f5f5f;
         gap: 40px;
         .hot {
@@ -306,15 +308,16 @@
         }
       }
       .details {
-        gap: 20px;
-        font-size: 12px;
+        gap: 6px;
+        font-size: 11px;
+        text-align: center;
       }
     }
     .btn-n {
       background: transparent;
       height: 39px;
-      color: #181818;
-      border: 1px solid #181818;
+      color: var(--secondary-color);
+      border: 1px solid var(--secondary-color);
       border-radius: 5px;
       width: 100%;
       cursor: pointer;

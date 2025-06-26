@@ -1,0 +1,158 @@
+<div class="background-container">
+  <img src="/imgs/Background.png" alt="" />
+</div>
+<div class="landing-page-container">
+  <div class="landing-page-contents">
+    <span class="trending"
+      >Trendy and Exclusive <img src="/imgs/Arrow 1.svg" alt=""
+    /></span>
+    <div class="slider-container">
+      <div class="slider-action-btns">
+        <button class="btn btn-primary">
+          <img src="/imgs/typcn_arrow-left.svg" alt="" />
+        </button>
+        <button class="btn btn-secondary">
+          <img src="/imgs/typcn_arrow-left-1.svg" alt="" />
+        </button>
+      </div>
+      <div class="slider-content">
+        <div class="slider-text">
+          <h1 class="name">Ferrari F12 Berlinetta Coupe-2012</h1>
+          <p class="pricing-info">
+            <span class="hot">$280 Per Hour 0%</span> APR Representative
+          </p>
+        </div>
+        <div class="slider-btns">
+          <button class="btn btn-primary">Rent Now</button>
+          <button class="btn btn-secondary">Learn More</button>
+        </div>
+        <div class="slider-image">
+          <img src="/imgs/background-prev.png" draggable="false" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="car-display-layout default-layout">
+  <div class="heading-container">
+    <div class="title">
+      <h1>Search By Car Brands</h1>
+      <span
+        >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam ullam
+        debitis quae voluptatum. Illum id dignissimos rem, molestias delectus
+        est in vitae omnis a fugiat beatae alias. Doloribus, sit pariatur.</span
+      >
+    </div>
+    <div class="btn">
+      <button class="btn btn-primary">More Brands</button>
+    </div>
+  </div>
+  <div class="car-brands-layout">
+    <div class="car-brands">
+      <div class="brand">
+        <div class="logo">
+          <img src="/imgs/Logo-2.png" alt="" />
+        </div>
+        <div class="name">
+          <p>BMW</p>
+        </div>
+      </div>
+      <div class="brand active">
+        <div class="logo">
+          <img src="/imgs/Logo-1.png" alt="" />
+        </div>
+        <div class="name">
+          <p>Toyota</p>
+        </div>
+      </div>
+      <div class="brand">
+        <div class="logo">
+          <img src="/imgs/Logo-4.png" alt="" />
+        </div>
+        <div class="name">
+          <p>Mercedes-Benz</p>
+        </div>
+      </div>
+      <div class="brand">
+        <div class="logo">
+          <img src="/imgs/Logo-5.png" alt="" />
+        </div>
+        <div class="name">
+          <p>Lamborghini</p>
+        </div>
+      </div>
+      <div class="brand">
+        <div class="logo">
+          <img src="/imgs/Logo-3.png" alt="" />
+        </div>
+        <div class="name">
+          <p>Koenigsegg</p>
+        </div>
+      </div>
+      <div class="brand">
+        <div class="logo">
+          <img src="/imgs/Logo.png" alt="" />
+        </div>
+        <div class="name">
+          <p>Ferrari</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="car-display-view">
+    <% content.forEach(car => { %>
+    <a href="/car/<%= car.id %>">
+      <div class="card">
+        <div class="card-img">
+          <img src="<%= car.image %>" alt="" />
+        </div>
+        <div class="card-text">
+          <div class="heading">
+            <div class="name">
+              <h4><%= car.name %></h4>
+            </div>
+            <div class="pricing">
+              <p class="price">
+                <span class="hot"> $<%= car.priceDaily %></span> /Day
+              </p>
+              <p class="apr"><span>$<%= car.priceMonthly %></span> /Monthly</p>
+            </div>
+          </div>
+          <div class="details">
+            <div class="detail">
+              <div class="icon">
+                <img src="/imgs/ri_speed-up-line.svg" alt="" />
+              </div>
+              <div class="text"><p><%= car.horsePower %></p></div>
+            </div>
+            <div class="detail"><span>|</span></div>
+            <div class="detail">
+              <div class="icon">
+                <img src="/imgs/solar_transmission-linear.svg" alt="" />
+              </div>
+              <div class="text"><p><%= car.transmission %></p></div>
+            </div>
+            <div class="detail"><span>|</span></div>
+            <div class="detail">
+              <div class="icon">
+                <img src="/imgs/mdi_petrol-pump-outline.svg" alt="" />
+              </div>
+              <div class="text"><p><%= car.fuel %></p></div>
+            </div>
+            <div class="detail"><span>|</span></div>
+            <div class="detail">
+              <div class="icon">
+                <img src="/imgs/ri_speed-up-line.svg" alt="" />
+              </div>
+              <div class="text"><p><%= car.engine %></p></div>
+            </div>
+          </div>
+          <div class="btn">
+            <button class="btn-n">View Details</button>
+          </div>
+        </div>
+      </div>
+    </a>
+    <% }) %>
+  </div>
+</div>

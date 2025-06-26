@@ -1,0 +1,45 @@
+<!-- <div class="background-container">
+  <img src="/imgs/Background.png" alt="" />
+</div> -->
+<div class="form-container --flex-between">
+  <div class="img-container">
+    <img src="/cars/pngwing.com.png" alt="" srcset="" />
+  </div>
+  <div class="authentication-container --flex-column">
+    <div class="logo">
+      <img src="/imgs/site-logo.png" alt="" />
+    </div>
+    <div class="text">
+      <h2>Welcome Back!</h2>
+      <span>Please enter your details</span>
+    </div>
+    <form class="form-items --flex-column" action="/auth/login" method="POST">
+      <input
+        type="text"
+        class="details-fields"
+        name="email"
+        placeholder="Email"
+        required
+      />
+      <input
+        type="password"
+        class="details-fields"
+        name="Password"
+        placeholder="Password"
+        required
+      />
+      <input class="btn btn-primary" type="submit" value="Login" />
+      <input
+        class="btn btn-secondary"
+        type="button"
+        value="Log in with Google"
+      />
+    </form>
+    <div class="links">
+      <span
+        >Don't have an account?
+        <a style="color: #e7a602" href="/auth/register">Sign Up</a></span
+      >
+    </div>
+  </div>
+</div>

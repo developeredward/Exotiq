@@ -1,0 +1,62 @@
+<div>
+  <form
+    class="form-items --flex-column"
+    enctype="multipart/form-data"
+    action="/vehicles"
+    method="POST"
+  >
+    <input
+      type="text"
+      class="details-fields"
+      name="name"
+      placeholder="Name"
+      required
+    />
+    <input type="file" name="image" id="" />
+    <input
+      type="number"
+      class="details-fields"
+      name="priceDaily"
+      placeholder="Daily Rental Price"
+    />
+    <input
+      type="number"
+      class="details-fields"
+      name="priceMonthly"
+      placeholder="Monthly Rental Price"
+    />
+    <select name="category" class="details-fields">
+      <option value="SUV">SUV</option>
+      <option value="Sedan">Sedan</option>
+      <option value="Coupe">Coupe</option>
+      <option value="Hatchback">Hatchback</option>
+      <option value="Convertible">Convertible</option>
+      <option value="Truck">Truck</option>
+      <option value="Van">Van</option>
+      <option value="Wagon">Wagon</option>
+    </select>
+    <select name="transmission" class="details-fields">
+      <option value="Automatic">Automatic</option>
+      <option value="Manual">Manual</option>
+    </select>
+    <select name="fuel" class="details-fields">
+      <option value="Petrol">Petrol</option>
+      <option value="Diesel">Diesel</option>
+      <option value="Electric">Electric</option>
+      <option value="Hybrid">Hybrid</option>
+    </select>
+    <input
+      type="number"
+      name="horsePower"
+      class="details-fields"
+      placeholder="horsepower"
+    />
+    <input
+      type="number"
+      name="engine"
+      class="details-fields"
+      placeholder="engine"
+    />
+    <input class="btn btn-primary" type="submit" value="submit" />
+  </form>
+</div>
